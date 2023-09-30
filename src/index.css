@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "PPNeueMontreal";
+    src: url("/src/assets/fonts/PPNeueMontreal-Medium.otf") format("otf");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "PPNeueMontreal";
+    src: url("/src/assets/fonts/PPNeueMontreal-Bold.otf") format("otf");
+    font-weight: bold;
+    font-style: normal;
+  }
+}
