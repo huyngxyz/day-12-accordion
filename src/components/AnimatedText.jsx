@@ -24,7 +24,7 @@ export default function Heading({ phrases, className }) {
     <div ref={container} className={`text-7xl tracking-tighter p-10 max-w-6xl ${className}`}>
       {phrases.map((text, index) => {
         return (
-          <div key={index} className="overflow-hidden pb-2">
+          <div key={index} className={`overflow-hidden pb-2 ${index === 0 ? "indent-20" : ""}`}>
             <motion.p
               custom={index}
               initial="initial"

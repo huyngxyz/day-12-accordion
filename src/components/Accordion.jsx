@@ -59,7 +59,7 @@ export default function Accordion() {
         </div>
         <div
           ref={contentRef}
-          className={`pl-4 overflow-hidden transition-max-height duration-300 ease-[cubic-bezier(0.19, 1, 0.22, 1)] max-h-0 tracking-normal leading-[150%] flex  gap-y-4 gap-x-5 text-lg  ${isOpen ? 'mb-4' : 'mb-0'}`}
+          className={`pl-4 overflow-hidden transition-max-height duration-[400ms] ease-[cubic-bezier(0.16, 1, 0.3, 1)] max-h-0 tracking-normal leading-[150%] flex  gap-y-4 gap-x-5 text-lg  ${isOpen ? 'mb-4' : 'mb-0'}`}
           style={{ maxHeight: "0px" }}
         >
           <p>
