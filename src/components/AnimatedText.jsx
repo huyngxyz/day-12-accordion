@@ -1,9 +1,8 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
-export default function Heading({ phrases, className }) {
+export default function Heading({ phrases }) {
   const container = useRef(null);
-  
 
   const isInView = useInView(container, { once: true, margin: "0%" });
 
@@ -15,28 +14,32 @@ export default function Heading({ phrases, className }) {
       transition: {
         duration: 1.15,
         ease: [0.16, 1, 0.3, 1],
-        delay: 0.075 * i,
+        delay: 0.0125 * i,
       },
     }),
   };
 
   return (
-    <div ref={container} className={`text-7xl tracking-tighter p-10 max-w-6xl ${className}`}>
-      {phrases.map((text, index) => {
-        return (
-          <div key={index} className={`overflow-hidden pb-2 ${index === 0 ? "indent-20" : ""}`}>
-            <motion.p
-              custom={index}
-              initial="initial"
-              variants={animation}
-              animate={isInView ? "enter" : ""}
-              className=""
-            >
-              {text}
-            </motion.p>
-          </div>
-        );
-      })}
+    <div ref={container}>
+      <p className="text-[5vw] tracking-tighter leading-[1em] p-10 max-w-6xl">
+        {phrases.split(" ").map((word, index) => {
+          return (
+            <span key={index} className={`p-2 ${index === 0 ? "indent-20" : ""} relative  overflow-hidden inline-flex`}>
+              <motion.span
+                variants={animation}
+                initial='initial'
+                custom={index}
+                animate={isInView ? "enter" : ""}
+                key={index}
+              >
+                {word}
+              </motion.span>
+            </span>
+          );
+        })}
+      </p>
     </div>
-  );
+);
+
+ 
 }

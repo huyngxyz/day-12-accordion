@@ -5,15 +5,7 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {
-     
-      fontFamily: {
-        'montreal': ['PPNeueMontreal', 'sans-serif']
-      },
-      transitionProperty: {
-        'max-height': 'max-height'
-      }
-    },
+    extend: {},
   },
   plugins: [],
 }
