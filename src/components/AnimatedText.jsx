@@ -7,12 +7,12 @@ export default function Heading({ phrases }) {
   const isInView = useInView(container, { once: true, margin: "0%" });
 
   const animation = {
-    initial: { y: "100%" },
+    initial: { y: "200%" },
 
     enter: (i) => ({
       y: "0",
       transition: {
-        duration: 1.15,
+        duration: 1,
         ease: [0.16, 1, 0.3, 1],
         delay: 0.0125 * i,
       },
