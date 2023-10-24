@@ -17,3 +17,9 @@
     font-style: normal;
   }
 }
+
+@layer base {
+  * {
+    /* border: 1px solid red; */
+  }
+}

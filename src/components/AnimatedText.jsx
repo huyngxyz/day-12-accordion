@@ -21,10 +21,10 @@ export default function Heading({ phrases }) {
 
   return (
     <div ref={container}>
-      <p className="text-[5vw] tracking-tighter leading-[1em] p-10 max-w-6xl">
+      <p className="text-[5vw]  tracking-tighter leading-[0.75em] p-10 max-w-5xl xl:max-w-7xl">
         {phrases.split(" ").map((word, index) => {
           return (
-            <span key={index} className={`p-2 ${index === 0 ? "indent-20" : ""} relative  overflow-hidden inline-flex`}>
+            <span key={index} className={`pb-2 lg:pb-4 px-2 ${index === 0 ? "indent-20" : ""} relative  overflow-hidden inline-flex`}>
               <motion.span
                 variants={animation}
                 initial='initial'
